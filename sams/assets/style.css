@@ -1,0 +1,196 @@
+/* Custom CSS for SAMS */
+
+/* Dashboard Cards */
+.dashboard-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.dashboard-card .card-icon {
+    font-size: 3rem;
+    opacity: 0.3;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* Profile Section */
+.profile-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+/* Table Styles */
+.table-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background: #3498db;
+    color: white;
+    border: none;
+}
+
+.table-hover tbody tr:hover {
+    background: #f0f8ff;
+    transition: background 0.3s;
+}
+
+/* Form Styles */
+.form-control:focus, .form-select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.btn-primary {
+    background: #3498db;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Attendance Chart */
+.attendance-chart {
+    position: relative;
+    height: 300px;
+    margin: 20px 0;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    padding: 20px;
+    border-left: 3px solid #3498db;
+    margin-bottom: 20px;
+    background: #f8f9fa;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 25px;
+    width: 13px;
+    height: 13px;
+    background: #3498db;
+    border-radius: 50%;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0,0,0,.1);
+    border-radius: 50%;
+    border-top-color: #3498db;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+    }
+    
+    .dashboard-card {
+        margin-bottom: 15px;
+    }
+    
+    .profile-header {
+        text-align: center;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar, .navbar, .footer, .btn, .no-print {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .col-md-10 {
+        width: 100% !important;
+    }
+}
+
+/* Animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
